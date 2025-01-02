@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="center" id="center">
+            <div class="questionDiv">
+                <h4 id="question">Question 1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur,
+                    vitae!</h4>
+            </div>
+            <div class="options" id="options">
+                <button id="btn1" onclick="check(0)"> </button>
+                <button id="btn2" onclick="check(1)"> </button>
+                <button id="btn3" onclick="check(2)"> </button>
+                <button id="btn4" onclick="check(3)"> </button>
+            </div>
+            <div class="nextprev" id="nextprev">
+                <button id="prevBtn" onclick="prev()">Previous</button>
+                <button id="nextBtn" onclick="next()">Next</button>
+                <button id="submitBtn"onclick="getMarks()" type="submit">Submit</button>
+                <button id="retry"onclick="retry()" type="submit">Retry</button>
+            </div>
+            <div id="submitBtn"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
