@@ -118,6 +118,7 @@ let index = 0
 let marks = 0
 let time = setTimeout(next, 60000)
 function check(option) {
+    
     let answer = ques[index].opts[option]
     if (ques[index].checked === "false") {
         if (answer === ques[index].ans) {
@@ -125,7 +126,6 @@ function check(option) {
             ques[index].checked = "true";
             console.log(marks);
         }
-
         next();
     }
     else {
@@ -133,12 +133,11 @@ function check(option) {
             alert("Please press submit button")
         }
         else if (index < ques.length - 1)
-            alert("You have already choseen the option")
-
+            alert("You have already selected an option for this question. Please move to the next question.")
     }
 }
 function getMarks() {
-    question.innerHTML = `Marks= ${marks}/${ques.length}<br> Percentange=${((marks / ques.length) * 100).toFixed(2)}`
+    question.innerHTML = `You scored ${marks}/${ques.length}.<br> Percentage: ${(marks / ques.length * 100).toFixed(2)}%`
     question.style.fontSize = '2rem'
     options.style.display = `none`
     prevBtn.style.display = `none`
